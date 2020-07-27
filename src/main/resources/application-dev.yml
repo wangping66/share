@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/share?characterEncoding=utf8&useSSL=false&serverTimezone=GMT
+    username: root
+    password: ojbk
+    #最大活跃数
+    maxActive: 20
+    #初始化数量
+    initialSize: 1
+  jpa:
+    hibernate:
+      ddl-auto: none
