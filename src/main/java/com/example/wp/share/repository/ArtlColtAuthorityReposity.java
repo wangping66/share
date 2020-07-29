@@ -8,4 +8,6 @@ public interface ArtlColtAuthorityReposity extends PagingAndSortingRepository<Ar
 
     ArtlColtAuthority findByArtlTypeAndPayCondition(String artlType,String payCondition);
 
+
+
 }

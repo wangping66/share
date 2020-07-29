@@ -3,3 +3,8 @@
       2)基于@Query 注解查询
 
 选中ArtlCollateralRepository中的JpaRepository，右击，点击diagrams ，查看接口之间的继承关系
+
+
+SimpleJpaRespositry——用来进行默认的DAO操作，是所有Repository的默认实现
+JpaRepositoryFactoryBean——装配bean，装载了动态代理Proxy，会以对应的DAO的beanName为key注册到DefaultListableBeanFactory中，在需要被注入的时候从这个bean中取出对应的动态代理Proxy注入给DAO
+JdkDynamicAopProxy——动态代理对应的InvocationHandler，负责拦截DAO接口的所有的方法调用，然后做相应处理，比如findByUsername被调用的时候会先经过这个类的invoke方法

@@ -21,4 +21,5 @@ public class ArtlColtAuthorityService {
         return artlColtAuthorityReposity.findAll(page);
     }
 
+
 }

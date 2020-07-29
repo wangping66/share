@@ -27,11 +27,12 @@ public class ShareApplication {
         //intellij idea如何快速查看当前类中的所有方法 alt+7
         //-------org.springframework.data.jpa.repository.support.SimpleJpaRepository@598f6c93
         //-------class com.sun.proxy.$Proxy98 这个是代理对象 是SimpleJpaRepository的代理
+        //动态代理对象
         System.out.println("-------"+custBaseRepository);
         System.out.println("-------"+custBaseRepository.getClass());
-        //CustBaseController custBaseController = applicationContext.getBean(CustBaseController.class);
-        //CustBase custBase = custBaseRepository.findCustBaseByCustId("1");
-        //System.out.println(custBase);
+        CustBaseController custBaseController = applicationContext.getBean(CustBaseController.class);
+        CustBase custBase = custBaseRepository.findCustBaseByCustId("1");
+        System.out.println(custBase);
 
 
 

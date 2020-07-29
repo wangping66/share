@@ -20,7 +20,6 @@ import java.util.List;
 public interface CustBaseRepository extends Repository<CustBase,String> {
 
 
-
     CustBase findCustBaseByCustId(String custId);
 
     @Query("from CustBase")

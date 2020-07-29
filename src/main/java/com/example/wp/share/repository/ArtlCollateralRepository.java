@@ -12,4 +12,6 @@ public interface ArtlCollateralRepository extends JpaRepository<ArtlCollateral,S
 
 
 
+
+
 }

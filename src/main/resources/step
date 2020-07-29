@@ -1,0 +1,5 @@
+1:我们只写了接口，但是没有写实现类，这个实现类就是Spring在运行的时候，注入的代理对象
+2:生成的是什么对象？代理对象：通过jdk生成的动态代理对象,是SimpleJpaRepository
+3:SimpleJpaRepository实现了最底层的接口JpaRepository，所以这个类中肯定有接口的所有方法
+
+
