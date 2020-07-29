@@ -34,7 +34,7 @@ public interface CustBaseRepository extends Repository<CustBase,String> {
     //此类型查询，返回值只能是void/int/Integer
     @Query(value = "UPDATE cust_base set cust_no =:custNo where cust_name=:custName ", nativeQuery = true)
     @Modifying
-    @Transactional
+
     Integer testUpdate(String custNo,String custName);
 
 

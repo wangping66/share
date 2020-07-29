@@ -24,6 +24,10 @@ public class CustBase implements Serializable, Cloneable {
     private String custId;
 
 
+    /*@OneToOne
+    @JoinColumn(name="collateral_id")//维护一个关联关系
+    private ArtlCollateral artlCollateral;*/
+
     /*@OneToOne(mappedBy = "custBase")
     private ArtlCollateral artlCollateral;*/
     /**

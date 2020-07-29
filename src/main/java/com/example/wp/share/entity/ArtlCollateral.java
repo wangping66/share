@@ -28,6 +28,9 @@ public class ArtlCollateral implements Serializable,Cloneable{
     /*@OneToOne
     @JoinColumn(name="cust_id")//维护一个关联关系
     private CustBase custBase;*/
+
+    /*@OneToOne(mappedBy = "artlCollateral")
+    private CustBase custBase;*/
     /** 押品名称 */
     private String collateralName ;
     /** 抵质押类型 */

@@ -6,6 +6,7 @@ import com.example.wp.share.entity.ArtlCollateral;
 import com.example.wp.share.entity.CustBase;
 import com.example.wp.share.repository.ArtlCollateralRepository;
 import com.example.wp.share.repository.CustBaseRepository;
+import com.example.wp.share.service.CustBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,8 @@ public class CustBaseController {
     @Autowired
     CustBaseRepository custBaseRepository;
 
+    @Autowired CustBaseService custBaseService;
+
     @Autowired ArtlCollateralRepository artlCollateralRepository;
 
     @GetMapping("/{id}")
@@ -31,7 +34,7 @@ public class CustBaseController {
         return jsonString;
     }
 
-    @GetMapping("/")
+    @GetMapping("/testQuery")
     public String getCustBaseList() {
         List<CustBase> custBase = custBaseRepository.getCustBaseList();
         return JSON.toJSONString(custBase);
@@ -47,11 +50,16 @@ public class CustBaseController {
     public Integer testSave() {
         ArtlCollateral artlCollateral = new ArtlCollateral();
         CustBase custBase = new CustBase();
-
-
         artlCollateralRepository.save(artlCollateral);
         artlCollateral.setCollateralTypeFirst("9527");
         return 1;
+    }
+
+
+    @GetMapping("testOneToOne/{id}")
+    public CustBase testOneToOne(@PathVariable String id) {
+        CustBase custBaseByCust = custBaseService.findById(id);
+        return custBaseByCust;
     }
 
 

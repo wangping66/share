@@ -1,13 +1,23 @@
 package com.example.wp.share.service;
 
+import com.example.wp.share.entity.CustBase;
+import com.example.wp.share.repository.CustBaseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-@Service("custBaseServiceImpl")
-public class CustBaseServiceImpl {
+import org.springframework.transaction.annotation.Transactional;
 
 
+@Transactional
+@Service
+public class CustBaseServiceImpl implements CustBaseService{
 
-    public Long findCustBaseByCustId(String custId) {
-        return 1L;
+
+    @Autowired
+    CustBaseRepository custBaseRepository;
+
+
+    public CustBase findById(String custId) {
+        CustBase custBase = custBaseRepository.findCustBaseByCustId(custId);
+        return custBase;
     }
 }
