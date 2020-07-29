@@ -1,3 +1,6 @@
+logging:
+  level:
+    root: info
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -11,4 +14,4 @@ spring:
     initialSize: 1
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update

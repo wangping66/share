@@ -1,0 +1,2 @@
+JSR 338主要定义了如何通过普通的Java domain进行关系数据库的操作及映射
+我们都知道，在使用持久化工具的时候，一般都有一个对象来操作数据库，在原生的Hibernate中叫做Session，在JPA中叫做EntityManager，在MyBatis中叫做SqlSession

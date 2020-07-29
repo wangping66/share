@@ -1,0 +1,5 @@
+1:Repository 接口是 Spring Data JPA 中为我我们提供的所有接口中的顶层接口 Repository 提供了两种查询方式的支持
+      1)基于方法名称命名规则查询(findBy(关键字)+属性名称(属性名称的首字母大写)+查询条件(首字母大写))
+      2)基于@Query 注解查询
+
+选中ArtlCollateralRepository中的JpaRepository，右击，点击diagrams ，查看接口之间的继承关系

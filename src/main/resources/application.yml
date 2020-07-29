@@ -1,12 +1,11 @@
 server:
-  context-path: /share
-  port: 9090
+  port: 9000
 spring:
   profiles:
     active: dev
   jpa:
     database: MYSQL
-    show-sql: false
+    show-sql: true
     physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
     format-sql: true
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
